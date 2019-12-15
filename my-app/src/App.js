@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Display from './Components/Display';
+import Dashboard from './Components/Dashboard';
 
 function App() {
 
@@ -42,7 +43,17 @@ function App() {
   return (
       <div>
         <h2>Lets Play Some BaseBall!!!!!!</h2>
-        <Display strike={strike} ball={ball} />
+        <Display
+        // passing state values to display component via PROPS
+         strike={strike}
+         ball={ball}/>
+
+        <Dashboard
+        // passing button functionality to buttons in DASHBOARD via PROPS
+         strikeButton={strikeButton}
+         ballButton={ballButton}
+         foulButton={foulButton}
+         hitButton={hitButton}/>
       </div>
   );
 }

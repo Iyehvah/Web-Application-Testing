@@ -1,5 +1,5 @@
 import React from 'react';
-
+//updating the state via props here
 const Display = props => {
     return (
         <div>
